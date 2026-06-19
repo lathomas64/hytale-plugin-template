@@ -41,6 +41,11 @@ repositories {
     mavenCentral()
 }
 
+tasks.named<Jar>("jar") {
+    archiveBaseName.set(project.property("mod_name").toString())
+    archiveVersion.set(project.property("version").toString())
+}
+
 // Uncomment if you are using IntelliJ.
 // idea {
 //     module {
